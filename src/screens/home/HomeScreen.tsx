@@ -6,10 +6,6 @@ import { MoimHeader } from "./components/MoimHeader";
 import { Spacer } from "../../components/Spacer";
 import { HomeEventList } from "./components/HomeEventList";
 import { HomeHashtagList } from "./components/HomeHashtagList";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
 
 export const HomeScreen: React.FC = () => {
   const homenavigation = useNavigation();

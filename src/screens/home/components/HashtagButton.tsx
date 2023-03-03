@@ -20,6 +20,7 @@ export const HashtagButton: React.FC<{
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          marginTop: wp * 0.02 * -1,
         }}
       >
         <Image
