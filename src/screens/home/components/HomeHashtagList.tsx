@@ -1,6 +1,13 @@
 import React from "react";
 import { View } from "react-native";
 import { HashtagButton } from "./HashtagButton";
+import {
+  widthPercentageToDP as wpSize,
+  heightPercentageToDP as hpSize,
+} from "react-native-responsive-screen";
+
+const wp = wpSize("100%");
+const hp = hpSize("100%");
 
 export const HomeHashtagList: React.FC<{ onPressHashtag: () => void }> = (
   props
@@ -8,17 +15,14 @@ export const HomeHashtagList: React.FC<{ onPressHashtag: () => void }> = (
   return (
     <View
       style={{
-        paddingHorizontal: 5,
-        paddingVertical: 5,
-        marginBottom: 30,
+        width: wp,
+        paddingHorizontal: wp * 0.05,
       }}
     >
       <View
         style={{
           flexDirection: "row",
-          alignItems: "center",
           justifyContent: "space-around",
-          paddingHorizontal: 10,
         }}
       >
         <HashtagButton
@@ -47,8 +51,6 @@ export const HomeHashtagList: React.FC<{ onPressHashtag: () => void }> = (
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-around",
-          paddingHorizontal: 10,
-          marginTop: 10,
         }}
       >
         <HashtagButton
