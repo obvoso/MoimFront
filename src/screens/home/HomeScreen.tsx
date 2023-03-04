@@ -16,17 +16,13 @@ export const HomeScreen: React.FC = () => {
     homenavigation.navigate("HashTag" as never);
   }, [homenavigation]);
   return (
-    <View style={{ backgroundColor: "white" }}>
+    <View style={{ backgroundColor: "white", flex: 1 }}>
       <MoimHeader showBackButton={false} />
       <Spacer size={20} />
-      <ScrollView style={HomeScreenStyle.container}>
+      <ScrollView>
         <HomeHashtagList onPressHashtag={onPressHashtag} />
         <HomeEventList onPressEvent={onPressEvent} />
       </ScrollView>
     </View>
   );
 };
-
-const HomeScreenStyle = StyleSheet.create({
-  container: {},
-});
