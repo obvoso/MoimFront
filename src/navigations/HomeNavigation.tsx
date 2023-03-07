@@ -7,11 +7,14 @@ import React from "react";
 import { HomeScreen } from "../screens/home/HomeScreen";
 import { EventScreen } from "../screens/eventScreen/EventScreen";
 import { HashtagScreen } from "../screens/HashtagScreen";
+import { PostEventScreen } from "../screens/postScreen/PostEventScreen";
 
 export type HomeStackParam = {
   Home: undefined;
   Event: undefined;
   HashTag: undefined;
+  EventPost: undefined;
+  UserProfile: undefined;
 };
 
 const HomeStackScreenOptions = {
@@ -30,6 +33,7 @@ export const HomeNavigation: React.FC = () => {
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen name="Event" component={EventScreen} />
       <HomeStack.Screen name="HashTag" component={HashtagScreen} />
+      <HomeStack.Screen name="EventPost" component={PostEventScreen} />
     </HomeStack.Navigator>
   );
 };
